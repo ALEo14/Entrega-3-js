@@ -1,0 +1,31 @@
+
+[{
+    "id":0,
+    "name": "247",
+    "price": 5900,
+    "description": "Pan de papa Medallon de carne x2 Cheddar x2 Bacon Cebolla cruda",
+    "img": "img/247.webp"
+},
+{
+    "id":1,
+    "name": "703",
+    "price": 5500,
+    "description": "Pan de papa Medallon de carne x2 Cheddar x2 Pepinillos en vinagre Cebolla Lechuga",
+    "img": "img/703.webp"
+},
+{
+    "id":2,
+    "name": "24k",
+    "price": 5300,
+    "description": "Pan de papa Medallon de carne x2 Cheddar x2 Cebolla cruda",
+    "img": "img/24k.webp"
+},
+{
+    "id":3,
+    "name": "22", 
+    "price": 5800, 
+    "description": "Pan de papa Medallon de carne x2 Cheddar x2 Cebolla cruda Ketchup Mostaza",
+    "img": "img/22.webp"
+
+}  
+]
