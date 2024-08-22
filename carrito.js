@@ -72,5 +72,10 @@ function vaciarCarrito() {
     localStorage.removeItem("burgers");
     cargarCarrito(); 
 }
-document.querySelector(".vaciarCarrito").addEventListener("click", vaciarCarrito);
+const vaciarCarritoBtn = document.querySelector(".vaciarCarrito");
+if (vaciarCarritoBtn) {
+    vaciarCarritoBtn.addEventListener("click", vaciarCarrito);
+} else {
+    console.log("El botón de vaciar carrito no se encontró en el DOM.");
+}
 document.addEventListener("DOMContentLoaded", cargarCarrito);

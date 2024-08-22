@@ -1,3 +1,4 @@
+
 let burgers = [];
 fetch("burgers.json")
 .then(res => res.json())
@@ -9,6 +10,9 @@ fetch("burgers.json")
 const contenedorBurgers = document.querySelector(".container");
 
 function cargarProductos(burgerElegida) {
+    if (contenedorBurgers){
+
+    
     contenedorBurgers.innerHTML = "";
     burgerElegida.forEach(burger => {
         const div = document.createElement("div");
@@ -35,6 +39,9 @@ function cargarProductos(burgerElegida) {
             alert('Producto guardado!');
         });
     });
+}else {
+    console.log('No se encontro el contenedor de Burgers en el DOM');
+}
 }
 
 function save(array) {
@@ -63,3 +70,4 @@ botonescomprar.forEach(boton => {
           });
     })
 })
+
