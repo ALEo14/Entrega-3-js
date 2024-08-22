@@ -19,14 +19,14 @@ function cargarProductos(burgerElegida) {
                 <h5 class="card-title">${burger.name}</h5>
                 <p class="card-text">${burger.description}</p>
                 <p class="card-text">${burger.price}</p>
-                <a href="#" class="btn btn-primary" data-id="${burger.id}">Comprar</a>
+                <a href="#" class="eliminarProducto" data-id="${burger.id}">Comprar</a>
             </div>
         `;
         contenedorBurgers.appendChild(div);
     });
 
-    // Agrega los eventos a los botones "Comprar"
-    document.querySelectorAll('.btn-primary').forEach(button => {
+    
+    document.querySelectorAll('.eliminarProducto').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const burgerId = this.getAttribute('data-id');
@@ -45,7 +45,7 @@ function get() {
     return JSON.parse(localStorage.getItem('burgers')) || [];
 }
 
-// Función para guardar un producto individual
+
 function saveProduct(burger) {
     let storedBurgers = get();
     storedBurgers.push(burger);
@@ -53,3 +53,13 @@ function saveProduct(burger) {
 }
 
 
+const botonescomprar = document.querySelectorAll('.carritoComprar');
+botonescomprar.forEach(boton => {
+    boton.addEventListener('click', () => {
+        console.log('Comprando...');
+        Swal.fire({
+            title: "PAGADO",
+            icon: "success"
+          });
+    })
+})
